@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block title %}
+<title>OTP Generator</title>
+{% endblock %}
+
+{% block body_block %}
+
+<center>
+    <h1>Enter your username to generate OTP</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="un">username</label>
+        <input type="text" name="un" id="un"><br><br>
+
+        
+
+        <input type="submit" value="generate OTP">
+    </form>
+</center>
+
+{% endblock %}
